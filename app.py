@@ -20,6 +20,6 @@ if st.button("Generate & Send Email"):
             st.subheader("✉️ Response")
             st.markdown(response, unsafe_allow_html=True)
             if send_status:
-                st.success("Email sent successfully to {recipient_email}.")
+                st.success(f"Email sent successfully to {recipient_email}.")
             else:
                 st.error("Failed to send Email.")

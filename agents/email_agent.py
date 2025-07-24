@@ -1,7 +1,19 @@
-import streamlit as st
-import openai
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
 
-client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+load_dotenv()
+
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=OPENROUTER_API_KEY,
+    default_headers={
+        "HTTP-Referer": "https://your-app-domain.com",
+        "X-Title": "MailMate AI Assistant",   
+    }
+)
 
 def generate_email_response(email_text, tone):
     prompt = f"""
@@ -13,7 +25,7 @@ def generate_email_response(email_text, tone):
     Reply:
     """
     response = client.chat.completions.create(
-        model='gpt-3.5-turbo',
+        model="qwen/qwen3-235b-a22b-07-25:free",
         messages=[
             {
                 "role": "user",
