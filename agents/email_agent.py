@@ -25,7 +25,7 @@ def generate_email_response(email_text, tone):
     Reply:
     """
     response = client.chat.completions.create(
-        model="qwen/qwen3-235b-a22b-07-25:free",
+        model="qwen/qwen3-coder:free", ## Or (qwen/qwen3-235b-a22b-07-25:free)
         messages=[
             {
                 "role": "user",
