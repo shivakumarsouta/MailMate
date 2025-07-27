@@ -42,7 +42,7 @@ MailMate/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/shivkumars005/mailmate.git
+git clone https://github.com/shivakumarsouta/mailmate.git
 cd mailmate
 ```
 
