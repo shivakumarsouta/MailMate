@@ -1,6 +1,6 @@
 # 📬 MailMate – Think Less, Send Smart
 
-**MailMate** is an AI-powered automatic email response generator built using Streamlit. It analyzes received emails, applies your chosen tone, and crafts a smart, human-like reply — then sends it directly via email. 💼🤖
+**MailMate** is an AI-powered automatic email response generator built using Streamlit. It analyzes received emails, applies your chosen tone, and crafts a smart, human-like reply — then the user can preview the generated email and edit if needed and can send it directly via email. 💼🤖
 
 ---
 
@@ -107,6 +107,12 @@ SMTP_PORT = 587
 4. Click **"Generate & Send Email"**
 
 Done. You’ll see the AI-generated reply, and the email will be sent automatically. ⚡
+
+---
+
+### ⚠️NOTE
+
+As the replies are AI generated & may not be 100% correct, Please recheck before sending the replies.
 
 ---
 
