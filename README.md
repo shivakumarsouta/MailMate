@@ -16,7 +16,7 @@
 
 ## Live 🌐
 
-* You can check the app [here](https://mail-respond-ai.streamlit.app/)
+* You can check the app [here](https://mailmate-1.streamlit.app/)
 
 ---
 
