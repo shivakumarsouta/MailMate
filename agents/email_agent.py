@@ -11,9 +11,10 @@ client = OpenAI(
     api_key=OPENROUTER_API_KEY,
     default_headers={
         "HTTP-Referer": "https://your-app-domain.com",
-        "X-Title": "MailMate AI Assistant",   
-    }
+        "X-Title": "MailMate AI Assistant",
+    },
 )
+
 
 def generate_email_response(email_text, tone):
     prompt = f"""
@@ -25,13 +26,7 @@ def generate_email_response(email_text, tone):
     Reply:
     """
     response = client.chat.completions.create(
-        model="mistralai/mistral-7b-instruct:free", ## Or (qwen/qwen3-235b-a22b-07-25:free)
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ]
+        model="meta-llama/llama-3-8b-instruct",
+        messages=[{"role": "user", "content": prompt}],
     )
     return response.choices[0].message.content
-
